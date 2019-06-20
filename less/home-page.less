@@ -1,24 +1,53 @@
 .home {
+  @media @max {
+    margin: 0 auto;
+    width: 90%;
+  }
+
+  header{
+    .flexContainer(column wrap, center, center);
+     margin-top: 10px;
+     padding-bottom:20px;
+     border-bottom: 2px dashed @navigation-border;
+     @media @max {
+       .flexContainer(column wrap, flex-start, flex-start);
+     }
+     h2 {
+       margin-top: 20px;
+     }
+   }
 
   .content-section {
     margin: 30px 0;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-
+    @media @max{
+      .flexContainer(column nowrap, flex-start, space-around);
+    }
    
     
     .text-content {
       width: 48%;
       padding-right: 1%;
+      @media @max {
+        width: 100%;
+      }
     }
 
     .img-content {
       width: 48%;
       padding-left: 1%;
+      @media @max {
+        width: 100%;
+        padding: 0 20px;
+      }
 
       img {
         border-radius: 10px;
+        @media @max {
+          width: 100%;
+        }
       }
     }
   }
@@ -30,20 +59,36 @@
     .text-content {
       padding-left: 1%;
       padding-right: 0;
+      @media @max {
+        padding: 0;
+        order: 1;
+      }
     }
 
     .img-content {
       padding-right: 1%;
       padding-left: 0;
+      @media @max {
+        order: 2;
+        padding: 0 20px;
+      }
     }
   }
 
   .content-destination {
     width: 75%;
     margin: 0 auto 30px;
+    @media @max {
+      width: 100%;
+    }
 
     img {
       border-radius: 10px;
+      @media @max {
+        width: 100%;
+        padding: 0 20px;
+        border-radius: 33px;
+      }
     }
   }
 
@@ -52,10 +97,24 @@
     border-top: 2px dashed @navigation-border;
     display: flex;
     justify-content: space-between;
+    @media @max {
+      .flexContainer(column nowrap, center,none);
+      text-align: left;
+    }
 
     .destination {
       width: 30%;
       margin-bottom: 30px;
+      @media @max {
+        width: 80%;
+      }
+      .btn {
+        .buttons(#029C74, 15px, white, 2rem);
+        width: 75%;
+        @media @max {
+          width: 100%;
+        }
+      }
     }
   }
 }// home

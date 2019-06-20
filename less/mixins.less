@@ -1,1 +1,17 @@
 // Mixins in here
+
+.flexContainer(@flex-flow, @align, @justify) {
+display: flex;
+flex-flow: @flex-flow;
+align-items: @align;
+justify-content: @justify;
+}
+
+.buttons(@background, @border-radius, @color, @font-size) {
+    border-radius: @border-radius;
+    color: @color;
+    font-size: @font-size;
+    background: @background;
+    text-align: center;
+    padding: 12px 0;
+}
